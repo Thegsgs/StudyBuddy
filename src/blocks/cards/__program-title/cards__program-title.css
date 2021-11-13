@@ -1,0 +1,10 @@
+.cards__program-title {
+  font-family: "Mulish", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.1px;
+  margin: 0 auto 59px;
+}

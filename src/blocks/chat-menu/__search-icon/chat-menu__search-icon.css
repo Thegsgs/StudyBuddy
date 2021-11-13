@@ -1,0 +1,10 @@
+.chat-menu__search-icon {
+  width: 55px;
+  height: 55px;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+  background-image: url(../../../images/looking-glass-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(136, 144, 150, 0.1);
+}

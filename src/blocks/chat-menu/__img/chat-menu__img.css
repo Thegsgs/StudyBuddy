@@ -1,0 +1,6 @@
+.chat-menu__img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}

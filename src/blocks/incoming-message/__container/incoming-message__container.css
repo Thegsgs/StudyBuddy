@@ -1,0 +1,8 @@
+.incoming-message__container {
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 7px;
+  background-color: #d3e9f8;
+  color: #0e1c26;
+  grid-area: container;
+}

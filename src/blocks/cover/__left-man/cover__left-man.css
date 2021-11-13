@@ -1,0 +1,12 @@
+.cover__left-man{
+    position: absolute;
+    left: -30px;
+    bottom: 0;
+    z-index: 0;
+}
+
+@media screen and (max-width: 1060px){
+    .cover__left-man{
+      display: none;
+    }
+  }

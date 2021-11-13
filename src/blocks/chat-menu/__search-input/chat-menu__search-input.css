@@ -1,0 +1,13 @@
+.chat-menu__search-input {
+  margin: 0;
+  width: 360px;
+  height: 52px;
+  border: none;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  font-family: "Mulish Regular", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: rgba(136, 144, 150, 0.1);
+  outline: none;
+}

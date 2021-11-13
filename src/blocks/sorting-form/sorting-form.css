@@ -1,0 +1,15 @@
+.sorting-form {
+  width: 100%;
+  margin: 0 auto 69px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1060px){
+  .sorting-form{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

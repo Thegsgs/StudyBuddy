@@ -1,0 +1,9 @@
+.header__links {
+}
+
+@media screen and (max-width: 1060px) {
+  .header__links {
+    visibility: hidden;
+    position: absolute;
+  }
+}

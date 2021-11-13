@@ -1,0 +1,26 @@
+.chat-button {
+  width: 400px;
+  height: 52px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #57a9e4;
+  border: none;
+  z-index: 1;
+  cursor: pointer;
+  color: #fff;
+  font-family: "Mulish Bold", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.3px;
+  text-align: left;
+  padding: 17px 0 17px 18px;
+  border-radius: 6px;
+  transition: visibility 0s ease 0.3s, opacity 0.3s ease;
+}
+
+@media screen and (max-width: 1060px) {
+  .chat-button {
+    visibility: hidden;
+  }
+}

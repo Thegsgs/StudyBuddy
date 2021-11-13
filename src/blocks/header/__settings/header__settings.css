@@ -1,0 +1,16 @@
+.header__settings {
+  margin-right: 25px;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+
+@media screen and (max-width: 1060px) {
+  .header__settings{
+      display: none;
+  }
+}

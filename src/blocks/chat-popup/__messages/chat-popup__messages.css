@@ -1,0 +1,14 @@
+.chat-popup__messages {
+  padding: 0 16px 0;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+@media screen and (max-width: 1060px) {
+  .chat-popup__messages {
+    height: calc(100vh - 225px);
+    min-height: 0;
+  }
+}

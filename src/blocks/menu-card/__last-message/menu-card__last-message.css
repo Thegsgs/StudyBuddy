@@ -1,0 +1,12 @@
+.menu-card__last-message {
+  margin: 0;
+  max-width: 230px;
+  max-height: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Mulish Bold", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+}

@@ -1,0 +1,14 @@
+.header__profile {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1060px) {
+  .header__profile {
+    margin-right: 10px;
+  }
+}

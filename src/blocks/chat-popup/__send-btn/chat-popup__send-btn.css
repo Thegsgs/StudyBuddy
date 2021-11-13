@@ -1,0 +1,12 @@
+.chat-popup__send-btn {
+  padding: 0;
+  width: 15%;
+  height: 54px;
+  border: none;
+  background-color: rgba(136, 144, 150, 0.1);
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+}

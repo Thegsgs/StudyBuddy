@@ -1,0 +1,4 @@
+.menu-card__text-container {
+  display: flex;
+  flex-direction: column;
+}

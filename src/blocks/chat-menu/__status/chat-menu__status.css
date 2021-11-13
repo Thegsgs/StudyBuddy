@@ -1,0 +1,7 @@
+.chat-menu__status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 16px;
+  height: 16px;
+}

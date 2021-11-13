@@ -1,0 +1,13 @@
+.menu-card__unread-counter {
+  margin: 12px 0 0 auto;
+  width: 20px;
+  height: 20px;
+  background-color: #57a9e4;
+  border-radius: 50%;
+  font-family: "Mulish Regular", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #fff;
+}

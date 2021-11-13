@@ -1,0 +1,16 @@
+.description__title {
+  margin: 140px 0 100px;
+  font-family: "Mullish Bold", Arial, Helvetica, sans-serif;
+  font-size: 44px;
+  line-height: 56px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #249F8D;
+}
+
+@media screen and (max-width: 1060px){
+  .description__title{
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

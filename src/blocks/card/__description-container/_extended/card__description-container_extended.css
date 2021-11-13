@@ -1,0 +1,14 @@
+.card__description-container_extended {
+  padding-bottom: 30px;
+  height: max-content;
+  background: linear-gradient(to top, #000 0%, #000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1060px) {
+  .card__description-container_extended {
+    overflow-y: scroll;
+    height: calc(100vh - 432px);
+  }
+}
