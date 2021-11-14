@@ -10,15 +10,12 @@ import TimeFix from "../utils/TimeFix";
 export default function Chat(props) {
   const messagesEndRef = useRef();
   const [messageContent, setMessageContent] = useState("");
-  const [currentChat, setCurrentChat] = useState({
-    chatName: "",
-    messages: [],
-  });
+  const [currentChat, setCurrentChat] = useState(props.lastChat);
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
   function findChat() {
-    if (props.lastChat != "") {
+    if (props.lastChat.chatName != "") {
       let obj = props.chats.find(
         (chat) => chat.chatName === props.lastChat.title
       );

@@ -14,40 +14,35 @@ import ChatButtonMobile from "./ChatButtonMobile";
 
 export default function App() {
   const [isProfilePopupOpen, setIsProfilePopupOpen] = useState(false);
-  const [lastChat, setLastChat] = useState("");
+  const [lastChat, setLastChat] = useState({
+    chatName: "",
+    messages: [],
+  });
   const [chats, setChats] = useState([]);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [isChatMenuOpen, setIsChatMenuOpen] = useState(false);
   const [isCardPopupOpen, setIsCardPopupOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState(initialCards[0]);
-
+  const [scrollState, setScrollState] = useState(true);
   useEffect(() => {
     setChats(initialChats);
   }, []);
 
-  function handleProfilePopupOpen() {
+  function handleProfilePopupToggle() {
     setIsProfilePopupOpen(!isProfilePopupOpen);
   }
 
-  function handleCardPopupOpen(card) {
+  function handleCardPopupToggle(card) {
     setSelectedCard(card);
     setIsCardPopupOpen(!isCardPopupOpen);
+    toggleScroll();
   }
 
-  function handleChatMenuPopupOpen() {
+  function handleChatMenuPopupToggle() {
     setIsChatMenuOpen(!isChatMenuOpen);
   }
 
-  function handleOpenChat(nameVar) {
-    function findChat(nameStr) {
-      let obj = initialCards.find((card) => card.title === nameStr);
-      return obj;
-    }
-    setLastChat(findChat(nameVar));
-    setIsChatOpen(true);
-  }
-
-  function handleStartNewChat(card) {
+  function handleOpenChat(card) {
     if (
       !chats.some((chat) => {
         if (chat.chatName === card.title) {
@@ -56,36 +51,47 @@ export default function App() {
       })
     ) {
       setChats([...chats, { chatName: card.title, messages: [] }]);
+      setLastChat(card);
+      setIsChatOpen(true);
+      setIsCardPopupOpen(false);
+      toggleScroll();
+    } else {
+      setLastChat(card);
+      setIsChatOpen(true);
+      toggleScroll();
     }
-    setLastChat(card);
-    setIsChatOpen(true);
-    setIsCardPopupOpen(false);
   }
 
   function toggleChatOpen() {
     if (lastChat != "") {
       setIsChatOpen(!isChatOpen);
+      toggleScroll();
     }
   }
 
   function closeChat() {
     setIsChatOpen(false);
+    toggleScroll();
+  }
+
+  function toggleScroll() {
+    setScrollState(!scrollState);
   }
 
   return (
-    <div className="page">
+    <div className={scrollState ? "page" : "page noscroll"}>
       <Header
-        openChatMenu={handleChatMenuPopupOpen}
-        openSettings={handleProfilePopupOpen}
+        openChatMenu={handleChatMenuPopupToggle}
+        openSettings={handleProfilePopupToggle}
       />
       <ProfilePopup
         isOpen={isProfilePopupOpen}
-        openSettings={handleProfilePopupOpen}
+        openSettings={handleProfilePopupToggle}
       />
       <Main
         cards={initialCards}
-        openChat={handleStartNewChat}
-        openCard={handleCardPopupOpen}
+        openChat={handleOpenChat}
+        openCard={handleCardPopupToggle}
         isOpen={isCardPopupOpen}
       />
       <Footer />
@@ -103,13 +109,13 @@ export default function App() {
         openChat={handleOpenChat}
         lastChat={lastChat}
         chats={chats}
-        openChatMenu={handleChatMenuPopupOpen}
+        openChatMenu={handleChatMenuPopupToggle}
       />
       <CardPopup
         isOpen={isCardPopupOpen}
         selectedCard={selectedCard}
-        openChat={handleStartNewChat}
-        closeCard={handleCardPopupOpen}
+        openChat={handleOpenChat}
+        closeCard={handleCardPopupToggle}
       />
     </div>
   );
