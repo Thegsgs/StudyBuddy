@@ -35,7 +35,7 @@ export default function App() {
   function handleCardPopupToggle(card) {
     setSelectedCard(card);
     setIsCardPopupOpen(!isCardPopupOpen);
-    toggleScroll();
+    toggleScrollMobile();
   }
 
   function handleChatMenuPopupToggle() {
@@ -54,28 +54,30 @@ export default function App() {
       setLastChat(card);
       setIsChatOpen(true);
       setIsCardPopupOpen(false);
-      toggleScroll();
+      toggleScrollMobile();
     } else {
       setLastChat(card);
       setIsChatOpen(true);
-      toggleScroll();
+      toggleScrollMobile();
     }
   }
 
   function toggleChatOpen() {
     if (lastChat != "") {
       setIsChatOpen(!isChatOpen);
-      toggleScroll();
+      toggleScrollMobile();
     }
   }
 
   function closeChat() {
     setIsChatOpen(false);
-    toggleScroll();
+    toggleScrollMobile();
   }
 
-  function toggleScroll() {
-    setScrollState(!scrollState);
+  function toggleScrollMobile() {
+    if (window.innerWidth <= 1060) {
+      setScrollState(!scrollState);
+    }
   }
 
   return (
