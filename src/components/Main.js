@@ -6,7 +6,7 @@ import ChatButton from "./ChatButton";
 
 export default function Main(props) {
   return (
-    <main className="content">
+    <main className="main">
       <Cover />
       <Description />
       <Cards

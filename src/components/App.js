@@ -81,7 +81,7 @@ export default function App() {
   }
 
   return (
-    <div className={scrollState ? "page" : "page noscroll"}>
+    <div className="page">
       <Header
         openChatMenu={handleChatMenuPopupToggle}
         openSettings={handleProfilePopupToggle}
